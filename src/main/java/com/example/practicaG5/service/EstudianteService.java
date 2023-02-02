@@ -25,4 +25,10 @@ public class EstudianteService {
     public Estudiante actualizar(Estudiante estudiante){
         return estudianteRepo.save(estudiante);
     }
+    public Estudiante buscarporId(String id){
+        return estudianteRepo.findByCedula(id);
+    }
+    public void eliminar(Estudiante estudiante) {
+        estudianteRepo.delete(estudiante);
+    }
 }

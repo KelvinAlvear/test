@@ -31,8 +31,8 @@
           <td th:text="${e.est_telefono}"></td>
           <td th:text="${e.est_direccion}"></td>
           <td>
-            <a class="btn btn-primary" >Editar</a>
-            <a class="btn btn-primary" >Eliminar</a>
+            <a role="button" class="btn btn-primary" th:href="@{/editar-estudiante/{id} (id=${e.est_cedula})}">Editar</a>
+            <a role="button" class="btn btn-danger" th:href="@{/eliminar-estudiante/{id}(id=${e.est_cedula})}">Eliminar</a>
           </td>
         </tr>
         </tbody>
